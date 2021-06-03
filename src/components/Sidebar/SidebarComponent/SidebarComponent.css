@@ -1,0 +1,12 @@
+.sidebarComponent {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  text-align: left;
+  cursor: pointer;
+  user-select: none;
+}

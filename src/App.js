@@ -11,9 +11,15 @@ function App() {
         <Header />
       </header>
       <main className="app__body">
-        <Sidebar />
-        <Feed />
-        <Widgets />
+        <section className="app__bodySidebar">
+          <Sidebar />
+        </section>
+        <section className="app__bodyFeed">
+          <Feed />
+        </section>
+        <section className="app__bodyWidgets">
+          <Widgets />
+        </section>
       </main>
     </div>
   );

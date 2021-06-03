@@ -2,3 +2,26 @@ body{
   --color: #4267B2;
   --bgColor: #eff2f5;
 }
+.app__header {
+  position: sticky !important;
+  top: 0 !important;
+}
+.app__body {
+  display: flex;
+  flex: 1;
+}
+
+/* .app__body > section {
+  overflow-y: scroll;
+} */
+.app__bodySidebar{
+  flex: 0.25;
+  overflow-y: scroll;
+}
+.app__bodyFeed {
+  flex: 0.5;
+  overflow-y: scroll;
+}
+.app__bodyWidgets {
+  flex: 0.25;
+}

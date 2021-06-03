@@ -1,12 +1,10 @@
 .header{
-  position: sticky;
   display: flex;
-  flex: 1;
   align-items: center;
   background-color: white;
-  z-index: 99;
+  z-index: 999;
+  padding-top: 5px ;
   box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
-
 }
 /* header left */
 .header__Left{
@@ -14,6 +12,7 @@
   align-items: center;
   flex: 0.25;
   padding-left: 10px;
+  margin-bottom: 5px;
 }
 .fbIcon {
   color: var(--color);
@@ -70,6 +69,8 @@
   align-items: center;
   justify-content: space-around;
   flex: 0.25;
+    margin-bottom: 5px;
+
 }
 .header__right > span {
   display: flex;
@@ -99,5 +100,5 @@
 .header__rightIcons .MuiSvgIcon-root {
   background-color: var(--bgColor) !important;
   border-radius: 50% !important;
-  padding: 7px;
+  padding: 10px;
 }
