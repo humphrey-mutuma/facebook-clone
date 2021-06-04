@@ -11,6 +11,7 @@ import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import EventIcon from "@material-ui/icons/Event";
 import RestoreIcon from "@material-ui/icons/Restore";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
+import LayersClearIcon from "@material-ui/icons/LayersClear";
 
 const Sidebar = () => {
   return (
@@ -22,25 +23,65 @@ const Sidebar = () => {
       <SidebarComponent
         Icon={LocalHospitalIcon}
         title="COVID-19 Information Center"
+        style={{ fill: "pink" }}
       />
-      <SidebarComponent Icon={PeopleIcon} title="Friends" />
-      <SidebarComponent Icon={GroupAddIcon} title="Groups" />
-      <SidebarComponent Icon={StorefrontIcon} title="Marketplace" />
-      <SidebarComponent Icon={VideoLibraryIcon} title="Videos" />
-      <SidebarComponent Icon={EventIcon} title="Events" />
-      <SidebarComponent Icon={RestoreIcon} title="Memories" />
-      <SidebarComponent Icon={BookmarkIcon} title="Saved" />
-      <SidebarComponent Icon={EmojiFlagsIcon} title="Pages" />
-      <SidebarComponent Icon={ExpandMoreOutlined} title="More" />
-      <hr />
-      <footer>
+      <SidebarComponent
+        Icon={PeopleIcon}
+        style={{ fill: "blue" }}
+        title="Friends"
+      />
+      <SidebarComponent
+        Icon={GroupAddIcon}
+        title="Groups"
+        style={{ fill: "blue" }}
+      />
+      <SidebarComponent
+        Icon={StorefrontIcon}
+        title="Marketplace"
+        style={{ fill: "skyBlue" }}
+      />
+      <SidebarComponent
+        Icon={VideoLibraryIcon}
+        title="Videos"
+        style={{ fill: "skyBlue" }}
+      />
+      <SidebarComponent
+        Icon={EventIcon}
+        title="Events"
+        style={{ fill: "rgba(255, 0, 0, 0.473)" }}
+      />
+      <SidebarComponent
+        Icon={RestoreIcon}
+        title="Memories"
+        style={{ fill: "blue" }}
+      />
+      <SidebarComponent
+        Icon={BookmarkIcon}
+        title="Saved"
+        style={{ fill: "pink" }}
+      />
+      <SidebarComponent
+        Icon={EmojiFlagsIcon}
+        title="Pages"
+        style={{ fill: "orange" }}
+      />
+      <SidebarComponent
+        Icon={ExpandMoreOutlined}
+        title="More"
+        style={{ fill: "black" }}
+      />
+
+      <footer className="sidebar__footer">
         <h4>Your shortcuts</h4>
         <div>
-          <SidebarComponent Icon={ExpandMoreOutlined} title="More" />
-          <SidebarComponent Icon={ExpandMoreOutlined} title="More" />
-          <SidebarComponent Icon={ExpandMoreOutlined} title="More" />
-          <SidebarComponent Icon={ExpandMoreOutlined} title="More" />
+          <SidebarComponent
+            Icon={LayersClearIcon}
+            title="AI - Machine Learning | Deep Learning"
+            style={{ fill: "blue" }}
+          />
         </div>
+        <br />
+
         <p>
           <span>Privacy</span>
           <span>Terms</span>
@@ -49,7 +90,7 @@ const Sidebar = () => {
           <span>Cookies</span>
           <span>Cookies</span>
           <span>More</span>
-          <span>Facebook &Copy; 2021 </span>
+          <span>Facebook &copy; 2021 </span>
         </p>
       </footer>
     </div>

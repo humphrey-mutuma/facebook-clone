@@ -1,12 +1,12 @@
 import { Avatar } from "@material-ui/core";
 import "./SidebarComponent.css";
 
-const SidebarComponent = ({ Icon, src, title }) => {
+const SidebarComponent = ({ Icon, style, src, title }) => {
   return (
     <div className="sidebarComponent">
-      {src && <Avatar src={src} />}
-      {Icon && <Icon />}
-      <h4>{title}</h4>
+      {src && <Avatar className="sidebarComponent__Avatar" src={src} />}
+      {Icon && <Icon style={style} />}
+      <h4 className="sidebarComponent__title">{title}</h4>
     </div>
   );
 };

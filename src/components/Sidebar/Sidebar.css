@@ -1,0 +1,15 @@
+
+.sidebar__footer {
+  border-top: 0.3px solid rgba(128, 128, 128, 0.301);
+}
+.sidebar__footer > h4, p {
+  margin-left: 12px;
+  padding: 8px;
+  color: gray;
+}
+.sidebar__footer > p > span {
+  margin-left: 5px;
+  padding-left: 5px;
+  color: gray;
+  float: left;
+}

@@ -9,6 +9,7 @@ body{
 .app__body {
   display: flex;
   flex: 1;
+  background-color: #eff2f57e;
 }
 
 /* .app__body > section {

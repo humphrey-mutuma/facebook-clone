@@ -9,4 +9,18 @@
   text-align: left;
   cursor: pointer;
   user-select: none;
+  margin-left: 5px;
+  border-radius: 8px 0 0 8px;
+}
+
+.sidebarComponent__Avatar {
+  width: 30px !important;
+  height: 30px !important;
+}
+.sidebarComponent:hover {
+  background-color: var(--bgColor);
+}
+.sidebarComponent__title{
+  margin-left: 10px;
+  font-weight: 500;
 }
