@@ -1,6 +1,7 @@
 .feedReel {
   height: 25vh;
   width: 19%;
+  box-shadow: var(--boxShadow);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,8 +9,6 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  box-shadow:  2px 2px 6px #bebebe,
-             -2px -2px 6px #ffffff;
   transition: transform 100ms ease-in-out;
   cursor: pointer;
 }

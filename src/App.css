@@ -1,6 +1,7 @@
 body{
   --color: #4267B2;
   --bgColor: #eff2f5;
+  --boxShadow: 0 2px 14px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 .app__header {
   position: sticky !important;

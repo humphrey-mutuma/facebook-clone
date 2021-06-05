@@ -5,7 +5,7 @@
   margin: 0 2rem;
   padding: 10px;
   border-radius: 8px;
-  box-shadow: 3px 5px 8px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--boxShadow);
   background-color: white;
   overflow-x: scroll;
   
