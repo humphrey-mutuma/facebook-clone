@@ -1,0 +1,50 @@
+.feedReel {
+  height: 25vh;
+  width: 19%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow:  2px 2px 6px #bebebe,
+             -2px -2px 6px #ffffff;
+  transition: transform 100ms ease-in-out;
+  cursor: pointer;
+}
+.feedReel:hover{
+  transform: scale(1.07);
+}
+.feedReel__dark{
+  height: 25vh;
+}
+
+.FeedReel__addIconDiv{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 5vh;
+  margin-top: 17.2vh;
+  border-radius: 0 0 5px 5px ;
+}
+.FeedReel__addIcon {
+  fill: var(--color) !important;
+  margin: auto;
+  position: relative !important;
+  top: -20px;
+  font-size: 2rem !important;
+  background-color: white;
+  border: 5px solid white;
+  border-radius: 50% !important;
+}
+.feedReel__avatar {
+  border: 5px solid var(--color) !important;
+  margin: 5px;
+}
+.feedReel__dark > p {
+ color: white;
+ padding-top: 10vh;
+}
