@@ -18,7 +18,7 @@
   height: 30px !important;
 }
 .sidebarComponent:hover {
-  background-color: var(--bgColor);
+  background-color: rgba(128, 128, 128, 0.089);
 }
 .sidebarComponent__title{
   margin-left: 10px;

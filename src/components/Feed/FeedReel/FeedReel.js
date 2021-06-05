@@ -18,9 +18,11 @@ const FeedReel = ({ src, bgImage, displayName, user }) => {
           </div>
           <div className="FeedReel__addIconDiv">
             <AddCircleIcon className="FeedReel__addIcon" />
+            <span>Create Story</span>
           </div>
         </div>
       )}
+
       {src && <Avatar className="feedReel__avatar" src={src} />}
       <div className="feedReel__dark">
         <p>{displayName}</p>

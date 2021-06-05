@@ -11,7 +11,6 @@ const Feed = () => {
         <FeedReel
           user
           bgImage="https://cdn.pixabay.com/photo/2018/06/14/21/11/girl-3475649__340.jpg"
-          displayName="Create story"
         />
         <FeedReel
           src="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
@@ -34,7 +33,7 @@ const Feed = () => {
           displayName="AbdulFatah Moha"
         />
       </div>
-      <div>
+      <div className="Feed__feedCreateStory">
         <FeedCreateStory />
       </div>
       <FeedPost />

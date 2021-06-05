@@ -1,5 +1,53 @@
 .feedCreateStory{
-  width: 10vw;
-  min-height: 10vh;
-  box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 5px 8px -9px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+.feedCreateStory__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+.feedCreateStory__headerForm {
+  flex: 1;
+  background-color: var(--bgColor);
+  border-radius: 2rem;
+  margin-left: 10px;
+}
+.feedCreateStory__headerForm  input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.05rem;
+  background-color: var(--bgColor);
+  width: 90%;
+}
+/* feedCreateStory__footer  */
+.feedCreateStory__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid var(--bgColor);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+.feedCreateStory__footer > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 1.1rem;
+  border-radius: 5px;
+}
+.feedCreateStory__footer > div:hover {
+  background-color: var(--bgColor);
+}
+.feedCreateStory__footer > div > h4{
+  font-weight: 500;
+  color: gray;
+  margin-left: 5px;
 }
