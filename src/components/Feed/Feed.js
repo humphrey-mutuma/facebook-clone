@@ -3,6 +3,7 @@ import "./Feed.css";
 import FeedReel from "./FeedReel/FeedReel";
 import FeedCreateStory from "./FeedCreateStory/FeedCreateStory";
 import FeedPost from "./FeedPost/FeedPost";
+import FeedCreateRoom from "./FeedCreateRoom/FeedCreateRoom";
 
 const Feed = () => {
   return (
@@ -35,6 +36,9 @@ const Feed = () => {
       </div>
       <div className="Feed__feedCreateStory">
         <FeedCreateStory />
+      </div>
+      <div className="feed__createRoom">
+        <FeedCreateRoom />
       </div>
       <FeedPost />
     </div>

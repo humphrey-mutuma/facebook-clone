@@ -1,0 +1,46 @@
+.feedCreateRoom {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 5px 8px -9px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  overflow-x: scroll;
+  
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    height: 0;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.feedCreateRoom > span {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--bgColor);
+  border-radius: 2rem;
+  padding: 5px;
+  margin-right: 5px;
+  min-width: fit-content;
+  cursor: pointer;
+   background-image: linear-gradient(45deg, #8078f3,pink);
+   background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.feedCreateRoom > span > .MuiSvgIcon-root {
+  margin-right: 5px;
+}
+.feedCreateRoom .MuiAvatar-root{
+  margin-left: 5px;
+  cursor: pointer;
+}
