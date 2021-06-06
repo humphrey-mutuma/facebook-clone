@@ -1,6 +1,6 @@
 .feedPost {
   flex: 1;
-  padding: 10px;
+  padding: 10px 0;
   margin: 0 10px;
   background-color: white;
   box-shadow: var(--boxShadow);
@@ -10,6 +10,7 @@
   color: black !important;
 }
 .feedPost__Header{
+  padding: 10px;
  display: flex;
  align-items: center;
  justify-content: space-between;
@@ -21,12 +22,92 @@
 .feedPost__displayName{
  margin-left: 1.1rem;
  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .feedPost__displayName span {
   color: gray;
   font-weight: normal;
 }
+.feedPost__isApproved {
+ margin: auto 2px;
+ font-size: smaller !important;
+}
 /* text section */
 .feedPost__text {
+  padding-bottom: 5px;
+}
+/* optional image part */
+.feedPost__Image {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  padding: 5px 0;
+}
+.feedPost__Image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* number of comments and shares */
+.feedPost__NumberOfComments {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px ;
+  margin: 0 10px;
+  color: gray;
+}
+.feedPost__NumberOfComments p{
+    color: grey !important;
+
+}
+.feedPost__NumberOfComments > div{
+  display: flex;
+  align-items: center;
+}
+.feedPost__ThumbUpOutlinedIcon {
+   display: flex;
+   align-items: center;
+}
+.feedPost__ThumbUpOutlinedIcon > .MuiSvgIcon-root  {
+  margin-right: 9px;
+  background-color: var(--color);
+  border-radius: 50%;
+  padding: 3px;
+  font-size: smaller !important;
+  color: white !important;
+}
+/*  post likes */
+.feedPost__Like {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
   padding: 5px;
+  margin: auto 10px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.feedPost__Like > div {
+  display: flex;
+  flex: 0.33;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 2rem ;
+  cursor: pointer;
+  color: gray;
+  border-radius: 5px;
+}
+.feedPost__Like > div > .MuiSvgIcon-root {
+  margin-right: 9px;
+}
+.feedPost__Like > div:hover {
+  background-color: var(--bgColor) ;
+}
+/* feedPost PostComments */
+.feedPost__PostComments {
+  padding: 5px;
+  margin: auto 10px;
 }

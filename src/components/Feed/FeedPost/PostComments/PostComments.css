@@ -1,0 +1,33 @@
+.postComments {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postComments form {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-left: 10px;
+}
+.postComments__form {
+  background-color: var(--bgColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  flex: 1;
+  padding: 5px 10px;
+}
+
+.postComments__form--input{
+  display: flex;
+  align-items: center;
+  flex: 1 !important;
+}
+.postComments__form--input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--bgColor);
+  font-size: 1rem;
+}
