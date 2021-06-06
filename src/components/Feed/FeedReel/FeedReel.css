@@ -1,6 +1,6 @@
 .feedReel {
-  height: 25vh;
-  width: 19%;
+  height: fit-content;
+  min-width: 120px;
   box-shadow: var(--boxShadow);
   background-position: center;
   background-repeat: no-repeat;
@@ -11,6 +11,7 @@
   flex-direction: column;
   transition: transform 100ms ease-in-out;
   cursor: pointer;
+  margin-left: 0.4rem;
 }
 .feedReel:hover{
   transform: scale(1.07);
@@ -19,37 +20,12 @@
   height: 25vh;
 }
 
-.FeedReel__addIconDiv{
-  box-sizing: border-box;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  height: 6vh;
-  margin-top: 16.2vh;
-  border-radius: 0 0 5px 5px ;
-}
-.FeedReel__addIconDiv span {
-  position: relative;
-  top: -15px;
-  font-size: 12px;
-}
-.FeedReel__addIcon {
-  fill: var(--color) !important;
-  position: relative !important;
-  top: -12px;
-  font-size: 2rem !important;
-  background-color: white;
-  border: 5px solid white;
-  border-radius: 50% !important;
-}
+
 .feedReel__avatar {
   border: 5px solid var(--color) !important;
   margin: 5px;
 }
 .feedReel__dark > p {
  color: white;
- padding-top: 10vh;
+ padding-top: 18vh;
 }

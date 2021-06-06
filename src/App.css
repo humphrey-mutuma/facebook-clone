@@ -27,3 +27,7 @@ body{
 .app__bodyWidgets {
   flex: 0.25;
 }
+
+.MuiAvatar-root {
+  z-index: 9 !important;
+}

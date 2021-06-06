@@ -1,0 +1,32 @@
+.feedPost {
+  flex: 1;
+  padding: 10px;
+  margin: 0 10px;
+  background-color: white;
+  box-shadow: var(--boxShadow);
+  border-radius: 8px;
+}
+.feedPost p {
+  color: black !important;
+}
+.feedPost__Header{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.feedPost__Header div {
+ display: flex;
+ align-items: center;
+}
+.feedPost__displayName{
+ margin-left: 1.1rem;
+ font-weight: 500;
+}
+.feedPost__displayName span {
+  color: gray;
+  font-weight: normal;
+}
+/* text section */
+.feedPost__text {
+  padding: 5px;
+}
