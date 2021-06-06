@@ -2,16 +2,16 @@
 .Feed__Reel {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex: 1;
   margin: 10px;
   padding: 5px;
   overflow-x: scroll;
 }
 ::-webkit-scrollbar {
-    /* width: 0;  Remove scrollbar space */
-    /* height: 0; */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0;  /* Remove scrollbar space */
+  height: 0;
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
@@ -30,7 +30,6 @@
   flex-direction: column;
   transition: transform 100ms ease-in-out;
   cursor: pointer;
-  margin-left: 6rem;
 }
 .feed__reel--userImage {
   width: 100%;
@@ -40,6 +39,7 @@
 }
 .feed__Reel--createStory:hover{
   transform: scale(1.07);
+  border-radius: 5px;
 }
 .feed__Reel--userImageDiv {
   height: 25vh;

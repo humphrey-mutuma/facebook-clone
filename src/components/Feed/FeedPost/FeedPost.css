@@ -5,6 +5,7 @@
   background-color: white;
   box-shadow: var(--boxShadow);
   border-radius: 8px;
+  margin-top: 1.5rem;
 }
 .feedPost p {
   color: black !important;

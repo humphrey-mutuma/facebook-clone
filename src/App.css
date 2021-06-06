@@ -6,6 +6,7 @@ body{
 .app__header {
   position: sticky !important;
   top: 0 !important;
+  z-index: 99 !important;
 }
 .app__body {
   display: flex;

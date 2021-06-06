@@ -51,7 +51,11 @@ const Feed = () => {
           bgImage="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
           displayName="Alice Ipsum"
         />
-       
+        <FeedReel
+          src="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
+          bgImage="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
+          displayName="AbdulFatah Moha"
+        />
       </div>
       <div className="Feed__feedCreateStory">
         <FeedCreateStory />
@@ -60,6 +64,7 @@ const Feed = () => {
         <FeedCreateRoom />
       </div>
       <div className="feed__post">
+        <FeedPost />
         <FeedPost />
       </div>
     </div>
