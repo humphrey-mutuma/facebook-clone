@@ -1,0 +1,30 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--bgColor);
+}
+.login article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d7dadd, #ffffff);
+  background: rgba( 239, 242, 245, 0.25 );
+  background: linear-gradient(145deg, #d7dadd, #ffffff);
+  box-shadow:  20px 20px 60px #cbced0,
+              -20px -20px 60px #ffffff;
+}
+.login article p{
+  color: var(--color);
+  margin-bottom: 1rem;
+}
+.login__logo {
+  font-size: 8rem !important;
+}
+.login__btn {
+  text-transform: inherit !important;
+}
