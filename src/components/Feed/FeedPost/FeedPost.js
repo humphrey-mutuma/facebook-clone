@@ -8,14 +8,14 @@ import ShareIcon from "@material-ui/icons/Share";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import PostComments from "./PostComments/PostComments";
 
-const FeedPost = () => {
+const FeedPost = ({ id,username, profilePic, image, message, timestamp }) => {
   return (
     <div className="feedPost">
       <header className="feedPost__Header">
         <div>
-          <Avatar />
+          <Avatar src={profilePic} alt={username} />
           <h4 className="feedPost__displayName">
-            Humphrey Mutuma
+            {username}
             <br />
             <span>
               <CheckCircleIcon
@@ -23,7 +23,7 @@ const FeedPost = () => {
                 color="primary"
               />
             </span>
-            <span>22hrs</span>
+            <span>{timestamp}</span>
           </h4>
         </div>
         <div>
@@ -35,16 +35,13 @@ const FeedPost = () => {
       {/* text section */}
       <section className="feedPost__text">
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
-          quidem minus et necessitatibus magnam tenetur dicta, alias
-          reprehenderit autem hic excepturi sequi voluptate tempore, nam magni
-          non consequuntur est.
+          {message}
         </p>
       </section>
       {/* oprional image part */}
       <section className="feedPost__Image">
         <img
-          src="https://cdn.pixabay.com/photo/2017/08/23/22/02/rolls-royce-2674490__340.jpg"
+          src={image}
           alt=""
         />
       </section>

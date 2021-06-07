@@ -64,8 +64,25 @@ const Feed = () => {
         <FeedCreateRoom />
       </div>
       <div className="feed__post">
-        <FeedPost />
-        <FeedPost />
+        <FeedPost
+          // id={id}
+          profilePic="https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_720.jpg"
+          message="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
+                    quidem minus et "
+          timestamp="24hrs"
+          username="Humphrey Mutuma"
+          image="https://cdn.pixabay.com/photo/2017/08/23/22/02/rolls-royce-2674490__340.jpg"
+        />
+        <FeedPost
+          // id={id}
+          profilePic="https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_721.jpg"
+          message="sit amet consectetur adipisicing elit. Iure fugiat
+                    quidem minusconsectetur adipisicing elit. Iure fugiat
+                    quidem minus et Lorem, ipsum dolor  "
+          timestamp="20hrs"
+          username="Ezra Muthuri"
+          image=""
+        />
       </div>
     </div>
   );
