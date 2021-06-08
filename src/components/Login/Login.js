@@ -3,13 +3,20 @@ import { Facebook } from "@material-ui/icons";
 import "./Login.css";
 
 import { auth, provider } from "./../../firebase";
+import { useStateValue } from "../../StateProvider";
+import { actionTypes } from "../../reducer";
 
 const Login = () => {
+  const [state, dispatch] = useStateValue();
+
   const signIn = () => {
     auth
       .signInWithPopup(provider)
       .then((results) => {
-        console.log(results);
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: results.user,
+        });
       })
       .catch((error) => alert.log(error.message));
   };
