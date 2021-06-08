@@ -12,13 +12,13 @@ const Login = () => {
   const signIn = () => {
     auth
       .signInWithPopup(provider)
-      .then((results) => {
+      .then((result) => {
         dispatch({
           type: actionTypes.SET_USER,
-          user: results.user,
+          user: result.user,
         });
       })
-      .catch((error) => alert.log(error.message));
+      .catch((error) => alert(error.message));
   };
   return (
     <div className="login">

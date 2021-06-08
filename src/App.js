@@ -7,13 +7,13 @@ import Widgets from "./components/Widgets/Widgets";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [{user}, dispatch] = useStateValue()
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="app">
       {!user ? (
-        <Login/>
+        <Login />
       ) : (
-        <Login>
+        <>
           <header className="app__header">
             <Header />
           </header>
@@ -28,7 +28,7 @@ function App() {
               <Widgets />
             </section>
           </main>
-        </Login>
+        </>
       )}
     </div>
   );

@@ -12,8 +12,11 @@ import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
+import { useStateValue } from "../../StateProvider";
 
 const Header = () => {
+    const [{ user }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <div className="header__Left">
@@ -44,7 +47,7 @@ const Header = () => {
 
       <div className="header__right">
         <span>
-          <Avatar className="header__rightAvatar" /> Humphrey
+          <Avatar src={user.photoURL} className="header__rightAvatar" /> Humphrey
         </span>
         <IconButton className="header__rightIcons">
           <AppsIcon />
