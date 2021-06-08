@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import FeedReel from "./FeedReel/FeedReel";
 import FeedCreateStory from "./FeedCreateStory/FeedCreateStory";
@@ -6,9 +6,22 @@ import FeedPost from "./FeedPost/FeedPost";
 import FeedCreateRoom from "./FeedCreateRoom/FeedCreateRoom";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import { useStateValue } from "../../StateProvider";
+import db from "../../firebase";
 
 const Feed = () => {
-  const [{user}, dispatch] = useStateValue()
+  // const [{ user }, dispatch] = useStateValue();
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setPosts(
+          snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      });
+  }, []);
+
 
   return (
     <div className="feed">
@@ -61,31 +74,22 @@ const Feed = () => {
         />
       </div>
       <div className="Feed__feedCreateStory">
-        <FeedCreateStory  />
+        <FeedCreateStory />
       </div>
       <div className="feed__createRoom">
         <FeedCreateRoom />
       </div>
       <div className="feed__post">
-        <FeedPost
-          // id={id}
-          profilePic={user.photoURL}
-          message="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
-                    quidem minus et "
-          timestamp="24hrs"
-          username={user.displayName}
-          image="https://cdn.pixabay.com/photo/2017/08/23/22/02/rolls-royce-2674490__340.jpg"
-        />
-        <FeedPost
-          // id={id}
-          profilePic="https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_721.jpg"
-          message="sit amet consectetur adipisicing elit. Iure fugiat
-                    quidem minusconsectetur adipisicing elit. Iure fugiat
-                    quidem minus et Lorem, ipsum dolor  "
-          timestamp="20hrs"
-          username="Ezra Muthuri"
-          image=""
-        />
+        {posts.map((post) => (
+          <FeedPost
+            key={post.id}
+            profilePic={post.data.profilePic}
+            message={post.data.message}
+            timestamp={post.data.timestamp}
+            username={post.data.username}
+            image={post.data.image}
+          />
+        ))}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import PostComments from "./PostComments/PostComments";
 
-const FeedPost = ({ id,username, profilePic, image, message, timestamp }) => {
+const FeedPost = ({ id, username, profilePic, image, message, timestamp }) => {
   return (
     <div className="feedPost">
       <header className="feedPost__Header">
@@ -23,7 +23,7 @@ const FeedPost = ({ id,username, profilePic, image, message, timestamp }) => {
                 color="primary"
               />
             </span>
-            <span>{timestamp}</span>
+            <span>{new Date(timestamp?.toDate()).toUTCString()}</span>
           </h4>
         </div>
         <div>
@@ -34,16 +34,11 @@ const FeedPost = ({ id,username, profilePic, image, message, timestamp }) => {
       </header>
       {/* text section */}
       <section className="feedPost__text">
-        <p>
-          {message}
-        </p>
+        <p>{message}</p>
       </section>
       {/* oprional image part */}
       <section className="feedPost__Image">
-        <img
-          src={image}
-          alt=""
-        />
+        <img src={image} alt="" />
       </section>
       {/* number of comments and shares */}
       <aside className="feedPost__NumberOfComments">
