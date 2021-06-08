@@ -15,7 +15,7 @@ import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceW
 import { useStateValue } from "../../StateProvider";
 
 const Header = () => {
-    const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="header">
@@ -47,7 +47,8 @@ const Header = () => {
 
       <div className="header__right">
         <span>
-          <Avatar src={user.photoURL} className="header__rightAvatar" /> Humphrey
+          <Avatar src={user.photoURL} className="header__rightAvatar" />
+          {user.displayName}
         </span>
         <IconButton className="header__rightIcons">
           <AppsIcon />

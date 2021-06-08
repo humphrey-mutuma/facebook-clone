@@ -12,14 +12,16 @@ import EventIcon from "@material-ui/icons/Event";
 import RestoreIcon from "@material-ui/icons/Restore";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import LayersClearIcon from "@material-ui/icons/LayersClear";
+import { useStateValue } from '../../StateProvider';
 
 const Sidebar = () => {
+  const [{user}, dispatch] = useStateValue()
+
   return (
     <div className="sidebar">
-      <SidebarComponent
-        src="https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_720.jpg"
-        title="Humphrey Mutuma"
-      />
+      <SidebarComponent 
+        src={user.photoURL} 
+        title={user.displayName} />
       <SidebarComponent
         Icon={LocalHospitalIcon}
         title="COVID-19 Information Center"

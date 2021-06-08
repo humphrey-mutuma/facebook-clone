@@ -5,8 +5,11 @@ import FeedCreateStory from "./FeedCreateStory/FeedCreateStory";
 import FeedPost from "./FeedPost/FeedPost";
 import FeedCreateRoom from "./FeedCreateRoom/FeedCreateRoom";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
+import { useStateValue } from "../../StateProvider";
 
 const Feed = () => {
+  const [{user}, dispatch] = useStateValue()
+
   return (
     <div className="feed">
       <div className="Feed__Reel">
@@ -58,7 +61,7 @@ const Feed = () => {
         />
       </div>
       <div className="Feed__feedCreateStory">
-        <FeedCreateStory />
+        <FeedCreateStory  />
       </div>
       <div className="feed__createRoom">
         <FeedCreateRoom />
@@ -66,11 +69,11 @@ const Feed = () => {
       <div className="feed__post">
         <FeedPost
           // id={id}
-          profilePic="https://cdn.pixabay.com/photo/2015/03/26/09/40/suit-690048_960_720.jpg"
+          profilePic={user.photoURL}
           message="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure fugiat
                     quidem minus et "
           timestamp="24hrs"
-          username="Humphrey Mutuma"
+          username={user.displayName}
           image="https://cdn.pixabay.com/photo/2017/08/23/22/02/rolls-royce-2674490__340.jpg"
         />
         <FeedPost

@@ -5,23 +5,30 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import CameraAltOutlinedIcon from "@material-ui/icons/CameraAltOutlined";
 import GifOutlinedIcon from "@material-ui/icons/GifOutlined";
 import PermMediaOutlinedIcon from "@material-ui/icons/PermMediaOutlined";
+import { useStateValue } from "../../../../StateProvider";
 
 const PostComments = () => {
-  const [comment, setComment] = useState('')
+  const [{ user }, dispatch] = useStateValue();
+
+  const [comment, setComment] = useState("");
 
   const commentHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // check empty submit
-    setComment('')
-  }
+    setComment("");
+  };
   return (
     <div className="postComments">
-      <Avatar />
+      <Avatar src={user.photoURL} />
       <form onSubmit={commentHandler}>
         <div className="postComments__form">
           <span className="postComments__form--input">
-            <input onChange={e => setComment(e.target.value)} value={comment} placeholder="Write a public comment..." />
+            <input
+              onChange={(e) => setComment(e.target.value)}
+              value={comment}
+              placeholder="Write a public comment..."
+            />
           </span>
           <span className="postComments__form--icons">
             <IconButton size={"small"}>

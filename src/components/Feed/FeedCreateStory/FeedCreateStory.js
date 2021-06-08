@@ -4,9 +4,12 @@ import "./FeedCreateStory.css";
 import VideoCallOutlinedIcon from "@material-ui/icons/VideoCallOutlined";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
+import { useStateValue } from "../../../StateProvider";
 
 const FeedCreateStory = () => {
+  const [{user} , dispatch] = useStateValue()
   const [post, setPost] = useState("");
+
 
   const postHandler = (e) => {
     e.preventDefault();
@@ -17,14 +20,14 @@ const FeedCreateStory = () => {
   return (
     <div className="feedCreateStory">
       <header className="feedCreateStory__header">
-        <Avatar src="https://cdn.pixabay.com/photo/2015/03/03/20/42/man-657869__340.jpg" />
+        <Avatar src={user.photoURL} />
         <span className="feedCreateStory__headerForm">
           <form onSubmit={postHandler}>
             <input
               onChange={(e) => setPost(e.target.value)}
               value={post}
               type="text"
-              placeholder="What's on your mind, Humphrey?"
+              placeholder={`What's on your mind ${user.displayName}?`}
             />
           </form>
         </span>
