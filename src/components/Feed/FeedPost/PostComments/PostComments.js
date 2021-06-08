@@ -25,6 +25,7 @@ const PostComments = () => {
         <div className="postComments__form">
           <span className="postComments__form--input">
             <input
+              required
               onChange={(e) => setComment(e.target.value)}
               value={comment}
               placeholder="Write a public comment..."

@@ -5,18 +5,26 @@ import VideoCallOutlinedIcon from "@material-ui/icons/VideoCallOutlined";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
 import { useStateValue } from "../../../StateProvider";
+import db from "../../../firebase";
+import firebase from "firebase";
 
 const FeedCreateStory = () => {
-  const [{user} , dispatch] = useStateValue()
+  const [{ user }, dispatch] = useStateValue();
   const [post, setPost] = useState("");
-
 
   const postHandler = (e) => {
     e.preventDefault();
     // check empty submit
+    db.collection("posts").add({
+      message: post,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      profilePic: user.photoURL,
+      username: user.displayName,
+      // image**
+    });
 
     setPost("");
-  };
+  }; 
   return (
     <div className="feedCreateStory">
       <header className="feedCreateStory__header">
@@ -24,6 +32,7 @@ const FeedCreateStory = () => {
         <span className="feedCreateStory__headerForm">
           <form onSubmit={postHandler}>
             <input
+             required
               onChange={(e) => setPost(e.target.value)}
               value={post}
               type="text"
