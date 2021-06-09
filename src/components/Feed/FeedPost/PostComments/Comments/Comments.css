@@ -1,0 +1,26 @@
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5px;
+}
+.comments__text {
+  margin-left: 1rem;
+  background-color: var(--bgColor);
+  border-radius: 2rem;
+  padding: 5px;
+}
+.comments__avatar {
+  width: 35px !important;
+  height: 35px !important;
+}
+.comments__text > h4 {
+  font-weight: 500;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+.comments__text > p {
+  padding-left: 0 ;
+  padding-top: 1px;
+  margin: 0 0 0 10px;
+}

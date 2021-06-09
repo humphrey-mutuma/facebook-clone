@@ -20,3 +20,14 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 export { auth, provider };
 export default db;
+
+export const logOut = () => {
+  auth
+    .signOut()
+    .then(() => {
+      alert("logged out");
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};

@@ -1,4 +1,8 @@
 .postComments {
+   padding: 5px 10px;
+}
+
+.postComments__commentsForm {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,4 +34,16 @@
   outline: none;
   background-color: var(--bgColor);
   font-size: 1rem;
+}
+/* comments section */
+.postComments__comments {
+  padding: 5px 10px;
+  margin-left: 2.5rem;
+}
+.postComments__details > summary{
+  cursor: pointer;
+  color: gray;
+}
+.postComments__details > summary:hover{
+  text-decoration: underline;
 }

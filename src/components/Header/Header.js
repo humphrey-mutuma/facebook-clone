@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import SearchIcon from "@material-ui/icons/Search";
@@ -13,6 +12,7 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import { useStateValue } from "../../StateProvider";
+import SimplePopover from "./SimplePopover";
 
 const Header = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -60,7 +60,7 @@ const Header = () => {
           <NotificationsActiveIcon />
         </IconButton>
         <IconButton className="header__rightIcons">
-          <ArrowDropDownRoundedIcon />
+          <SimplePopover />
         </IconButton>
       </div>
     </div>
