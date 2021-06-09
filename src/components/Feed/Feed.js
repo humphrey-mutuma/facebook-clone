@@ -87,7 +87,7 @@ const Feed = () => {
             message={post.data.message}
             timestamp={post.data.timestamp}
             username={post.data.username}
-            image={post.data.image}
+            imageUrl={post.data.imageUrl}
           />
         ))}
       </div>

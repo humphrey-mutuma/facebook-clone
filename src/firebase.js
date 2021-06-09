@@ -13,21 +13,10 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
-// const storage = firebaseApp.storage()
+const storage = firebase.storage();
 const auth = firebase.auth();
 // google auth provider
 const provider = new firebase.auth.GoogleAuthProvider();
 
-export { auth, provider };
+export { auth, provider, storage };
 export default db;
-
-export const logOut = () => {
-  auth
-    .signOut()
-    .then(() => {
-      alert("logged out");
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
-};

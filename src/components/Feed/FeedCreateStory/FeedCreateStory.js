@@ -1,4 +1,4 @@
-import { Avatar } from "@material-ui/core";
+import { Avatar, Button } from "@material-ui/core";
 import React, { useState } from "react";
 import "./FeedCreateStory.css";
 import VideoCallOutlinedIcon from "@material-ui/icons/VideoCallOutlined";
@@ -7,6 +7,7 @@ import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined"
 import { useStateValue } from "../../../StateProvider";
 import db from "../../../firebase";
 import firebase from "firebase";
+import ImageUpload from "./ImageUpload/ImageUpload";
 
 const FeedCreateStory = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -24,7 +25,7 @@ const FeedCreateStory = () => {
     });
 
     setPost("");
-  }; 
+  };
   return (
     <div className="feedCreateStory">
       <header className="feedCreateStory__header">
@@ -32,7 +33,7 @@ const FeedCreateStory = () => {
         <span className="feedCreateStory__headerForm">
           <form onSubmit={postHandler}>
             <input
-             required
+              required
               onChange={(e) => setPost(e.target.value)}
               value={post}
               type="text"
@@ -46,10 +47,9 @@ const FeedCreateStory = () => {
           <VideoCallOutlinedIcon fontSize="large" color="secondary" />
           <h4>Live Video</h4>
         </div>
-        <div>
-          <PhotoLibraryIcon fontSize="large" style={{ color: "green" }} />
-          <h4>Photos/Video</h4>
-        </div>
+        <section>
+          <ImageUpload message={post} />
+        </section>
         <div>
           <EmojiEmotionsOutlinedIcon
             fontSize="large"

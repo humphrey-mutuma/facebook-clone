@@ -1,0 +1,8 @@
+.ImageUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text__btn {
+  text-transform: inherit !important;
+}
