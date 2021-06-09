@@ -6,18 +6,24 @@ import CameraAltOutlinedIcon from "@material-ui/icons/CameraAltOutlined";
 import GifOutlinedIcon from "@material-ui/icons/GifOutlined";
 import PermMediaOutlinedIcon from "@material-ui/icons/PermMediaOutlined";
 import { useStateValue } from "../../../../StateProvider";
+import db from "../../../../firebase";
+import firebase from "firebase";
 
 const PostComments = () => {
   const [{ user }, dispatch] = useStateValue();
-
   const [comment, setComment] = useState("");
 
   const commentHandler = (e) => {
     e.preventDefault();
-
-    // check empty submit
+      db.collection("comments").add({
+        profilePic: user.photoURL,
+        username: user.displayName,
+        message: comment,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
     setComment("");
   };
+  
   return (
     <div className="postComments">
       <Avatar src={user.photoURL} />
