@@ -26,6 +26,7 @@ const FeedCreateStory = () => {
 
     setPost("");
   };
+
   return (
     <div className="feedCreateStory">
       <header className="feedCreateStory__header">
@@ -48,7 +49,9 @@ const FeedCreateStory = () => {
           <h4>Live Video</h4>
         </div>
         <section>
-          <ImageUpload message={post} />
+          <ImageUpload
+            message={post}
+          />
         </section>
         <div>
           <EmojiEmotionsOutlinedIcon

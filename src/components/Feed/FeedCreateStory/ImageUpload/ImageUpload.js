@@ -7,7 +7,7 @@ import firebase from "firebase";
 import { useStateValue } from "../../../../StateProvider";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 
-const ImageUpload = ({message}) => {
+const ImageUpload = ({ message }) => {
   const [image, setImage] = useState(null);
   const [{ user }, dispatch] = useStateValue();
   const [progress, setProgress] = useState(0);
