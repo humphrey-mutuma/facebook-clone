@@ -48,6 +48,7 @@ const ImageUpload = ({ message }) => {
               message: message,
               imageUrl: url,
               username: user.displayName,
+              profilePic: user.photoURL,
             });
 
             setImage(null);

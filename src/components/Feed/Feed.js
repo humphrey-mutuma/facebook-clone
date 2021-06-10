@@ -22,7 +22,6 @@ const Feed = () => {
       });
   }, []);
 
-
   return (
     <div className="feed">
       <div className="Feed__Reel">
@@ -32,7 +31,9 @@ const Feed = () => {
           <div className="feed__Reel--userImageDiv">
             <img
               className="feed__reel--userImage"
-              src="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
+              src={`https://i.pravatar.cc/150?img=${Math.floor(
+                Math.random() * 50
+              )}`}
               alt="image"
             />
           </div>
@@ -43,33 +44,57 @@ const Feed = () => {
         </div>
 
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2017/02/04/12/25/man-2037255__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2017/02/04/12/25/man-2037255__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="Peter Simon"
         />
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2021/05/28/02/27/kid-6289638__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2021/05/28/02/27/kid-6289638__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="Mary Magdalene"
         />
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="Ruth Wesu"
         />
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="AbdulFatah Moha"
         />
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2020/09/20/16/27/model-5587623__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="Alice Ipsum"
         />
         <FeedReel
-          src="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
-          bgImage="https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601__340.jpg"
+          src={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
+          bgImage={`https://i.pravatar.cc/150?img=${Math.floor(
+            Math.random() * 50
+          )}`}
           displayName="AbdulFatah Moha"
         />
       </div>
