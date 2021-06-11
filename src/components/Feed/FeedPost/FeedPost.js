@@ -1,5 +1,4 @@
 import { Avatar, IconButton } from "@material-ui/core";
-import React from "react";
 import "./FeedPost.css";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ThumbUpOutlinedIcon from "@material-ui/icons/ThumbUpOutlined";
@@ -12,12 +11,13 @@ import { useStateValue } from "../../../StateProvider";
 
 const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
   const [{ user }, dispatch] = useStateValue();
-  const [likes, setLikes] = useState(0);
-  const [shares, setShares] = useState(0);
+  const [likes, setLikes] = useState(112);
+  const [shares, setShares] = useState(7);
 
   const likeHandler = (e) => {
     setLikes(likes + 1);
   };
+
   const shareHandler = (e) => {
     setShares(shares + 1);
   };
@@ -59,12 +59,15 @@ const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
           <span className="feedPost__ThumbUpOutlinedIcon">
             <ThumbUpOutlinedIcon />
           </span>
-          {likes && user.displayName + " and " + likes + " others liked."}
+          {likes <= 112
+            ? likes + " likes"
+            : user.displayName + " and " + likes + " others liked."}
         </div>
         <div>
           <p>
-            {" "}
-            {shares && user.displayName + " and " + shares + " others shared."}
+            {shares <= 7
+              ? shares + " Shared"
+              : user.displayName + " and " + shares + " others shared"}
           </p>
         </div>
       </aside>

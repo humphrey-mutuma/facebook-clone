@@ -27,7 +27,7 @@ const PostComments = () => {
   };
 
   useEffect(() => {
-    db.collection("comments")
+    db.collection("posts/doc/comments")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) => {
         setComments(

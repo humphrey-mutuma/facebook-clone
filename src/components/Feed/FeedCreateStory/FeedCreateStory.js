@@ -45,7 +45,7 @@ const FeedCreateStory = () => {
       </header>
       <footer className="feedCreateStory__footer">
         <div>
-          <VideoCallOutlinedIcon fontSize="large" color="secondary" />
+          <VideoCallOutlinedIcon  fontSize="large" color="secondary" />
           <h4>Live Video</h4>
         </div>
         <section>
