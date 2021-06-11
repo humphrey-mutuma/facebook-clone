@@ -7,8 +7,21 @@ import ModeCommentOutlinedIcon from "@material-ui/icons/ModeCommentOutlined";
 import ShareIcon from "@material-ui/icons/Share";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import PostComments from "./PostComments/PostComments";
+import { useState } from "react";
+import { useStateValue } from "../../../StateProvider";
 
 const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
+  const [{ user }, dispatch] = useStateValue();
+  const [likes, setLikes] = useState(0);
+  const [shares, setShares] = useState(0);
+
+  const likeHandler = (e) => {
+    setLikes(likes + 1);
+  };
+  const shareHandler = (e) => {
+    setShares(shares + 1);
+  };
+
   return (
     <div className="feedPost">
       <header className="feedPost__Header">
@@ -46,21 +59,24 @@ const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
           <span className="feedPost__ThumbUpOutlinedIcon">
             <ThumbUpOutlinedIcon />
           </span>
-          878
+          {likes && user.displayName + " and " + likes + " others liked."}
         </div>
         <div>
-          <p>524 comments</p>
+          <p>
+            {" "}
+            {shares && user.displayName + " and " + shares + " others shared."}
+          </p>
         </div>
       </aside>
       {/* post likes */}
       <div className="feedPost__Like">
-        <div>
+        <div onClick={likeHandler}>
           <ThumbUpOutlinedIcon /> like
         </div>
         <div>
           <ModeCommentOutlinedIcon /> Comment
         </div>
-        <div>
+        <div onClick={shareHandler}>
           <ShareIcon /> Share
         </div>
       </div>

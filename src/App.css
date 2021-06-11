@@ -22,13 +22,13 @@ body{
   overflow-y: scroll;
 }
 .app__bodyFeed {
-  flex: 0.5;
+  flex: 1;
   overflow-y: scroll;
 }
 .app__bodyWidgets {
   flex: 0.25;
+  display: none;
 }
-
 .MuiAvatar-root {
   z-index: 9 !important;
 }
