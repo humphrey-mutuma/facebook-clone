@@ -9,7 +9,7 @@ import PostComments from "./PostComments/PostComments";
 import { useState } from "react";
 import { useStateValue } from "../../../StateProvider";
 
-const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
+const FeedPost = ({ postId, username, profilePic, imageUrl, message, timestamp }) => {
   const [{ user }, dispatch] = useStateValue();
   const [likes, setLikes] = useState(112);
   const [shares, setShares] = useState(7);
@@ -87,7 +87,7 @@ const FeedPost = ({ username, profilePic, imageUrl, message, timestamp }) => {
       {/* footer */}
       <footer className="feedPost__comments">
         <div className="feedPost__PostComments">
-          <PostComments />
+          <PostComments postId={postId} />
         </div>
       </footer>
     </div>

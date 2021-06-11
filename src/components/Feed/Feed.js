@@ -5,11 +5,9 @@ import FeedCreateStory from "./FeedCreateStory/FeedCreateStory";
 import FeedPost from "./FeedPost/FeedPost";
 import FeedCreateRoom from "./FeedCreateRoom/FeedCreateRoom";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
-import { useStateValue } from "../../StateProvider";
 import db from "../../firebase";
 
 const Feed = () => {
-  // const [{ user }, dispatch] = useStateValue();
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -108,6 +106,7 @@ const Feed = () => {
         {posts.map((post) => (
           <FeedPost
             key={post.id}
+            postId={post.id}
             profilePic={post.data.profilePic}
             message={post.data.message}
             timestamp={post.data.timestamp}

@@ -10,31 +10,43 @@ import db from "../../../../firebase";
 import Comments from "./Comments/Comments";
 import firebase from "firebase";
 
-const PostComments = () => {
+const PostComments = ({ postId }) => {
   const [{ user }, dispatch] = useStateValue();
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]); //comments from firestore
 
   const commentHandler = (e) => {
     e.preventDefault();
-    db.collection("comments").add({
+    db.collection("posts")
+    .doc(postId)
+    .collection("comments")
+    .add({
       profilePic: user.photoURL,
       username: user.displayName,
       message: comment,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
+
     setComment("");
   };
 
   useEffect(() => {
-    db.collection("posts/doc/comments")
-      .orderBy("timestamp", "desc")
-      .onSnapshot((snapshot) => {
-        setComments(
-          snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-        );
-      });
-  }, []);
+    let unsubscribe;
+    if (postId) {
+      db.collection("posts")
+        .doc(postId)
+        .collection("comments")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          setComments(
+            snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+          );
+        });
+    }
+    return () => {
+      unsubscribe();
+    };
+  }, [postId]);
 
   return (
     <div className="postComments">
