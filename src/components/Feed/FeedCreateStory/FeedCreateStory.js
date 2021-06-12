@@ -1,8 +1,7 @@
-import { Avatar, Button } from "@material-ui/core";
+import { Avatar } from "@material-ui/core";
 import React, { useState } from "react";
 import "./FeedCreateStory.css";
 import VideoCallOutlinedIcon from "@material-ui/icons/VideoCallOutlined";
-import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import EmojiEmotionsOutlinedIcon from "@material-ui/icons/EmojiEmotionsOutlined";
 import { useStateValue } from "../../../StateProvider";
 import db from "../../../firebase";

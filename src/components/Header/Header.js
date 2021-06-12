@@ -12,7 +12,6 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import { useStateValue } from "../../StateProvider";
 import LogOut from "./LogOut";
-import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
 import SidebarToggler from "./SidebarToggler";
 
 const Header = () => {

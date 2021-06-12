@@ -1,4 +1,4 @@
-import { Button, Link } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { Facebook } from "@material-ui/icons";
 import "./Login.css";
 
@@ -7,7 +7,7 @@ import { useStateValue } from "../../StateProvider";
 import { actionTypes } from "../../reducer";
 
 const Login = () => {
-  const [state, dispatch] = useStateValue();
+  const [{user}, dispatch] = useStateValue();
 
   const signIn = () => {
     auth

@@ -1,4 +1,4 @@
-import { Button, IconButton } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { useState } from "react";
 import "./ImageUpload.css";
 import { storage } from "../../../../firebase";
