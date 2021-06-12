@@ -1,7 +1,8 @@
 .sidebarComponent {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 0.25 !important;
+  width: 80%;
   padding: 10px;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -10,7 +11,7 @@
   cursor: pointer;
   user-select: none;
   margin-left: 5px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
 }
 
 .sidebarComponent__Avatar {

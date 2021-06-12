@@ -1,7 +1,9 @@
 .widgets {
-  padding: 5px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
 }
 .widgets iframe{
-  padding: 10px;
   border-radius: 5px;
 }

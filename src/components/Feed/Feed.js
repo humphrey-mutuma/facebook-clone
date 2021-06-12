@@ -32,7 +32,7 @@ const Feed = () => {
               src={`https://i.pravatar.cc/150?img=${Math.floor(
                 Math.random() * 50
               )}`}
-              alt="image"
+              alt="user"
             />
           </div>
           <div className="FeedReel__addIconDiv">

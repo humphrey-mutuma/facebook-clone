@@ -12,9 +12,12 @@
   transition: transform 100ms ease-in-out;
   cursor: pointer;
   margin-left: 0.4rem;
+  overflow: hidden !important;
 }
 .feedReel:hover{
   transform: scale(1.07);
+    overflow: hidden !important;
+
 }
 .feedReel__dark{
   height: 25vh;

@@ -31,7 +31,7 @@ const PostComments = ({ postId }) => {
   };
 
   useEffect(() => {
-    let unsubscribe;
+    // let unsubscribe;
     if (postId) {
       db.collection("posts")
         .doc(postId)
@@ -44,7 +44,7 @@ const PostComments = ({ postId }) => {
         });
     }
     return () => {
-      unsubscribe();
+      // unsubscribe();
     };
   }, [postId]);
 
@@ -82,7 +82,7 @@ const PostComments = ({ postId }) => {
       {/* comments section */}
       <div className="postComments__comments">
         <details className="postComments__details">
-          <summary>View 9 more comments</summary>
+          <summary>View more comments</summary>
           {comments.map((comment) => (
             <Comments
               key={comment.id}

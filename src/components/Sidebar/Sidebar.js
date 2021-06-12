@@ -19,9 +19,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <SidebarComponent 
-        src={user.photoURL} 
-        title={user.displayName} />
+      <SidebarComponent src={user.photoURL} title={user.displayName} />
       <SidebarComponent
         Icon={LocalHospitalIcon}
         title="COVID-19 Information Center"
@@ -66,6 +64,11 @@ const Sidebar = () => {
         Icon={EmojiFlagsIcon}
         title="Pages"
         style={{ fill: "orange" }}
+      />
+      <SidebarComponent
+        Icon={ExpandMoreOutlined}
+        title="More"
+        style={{ fill: "black" }}
       />
       <SidebarComponent
         Icon={ExpandMoreOutlined}

@@ -1,4 +1,3 @@
-
 .Feed__Reel {
   display: flex;
   align-items: center;
@@ -7,18 +6,10 @@
   margin: 10px;
   padding: 5px;
   overflow-x: scroll;
-}
-::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  height: 0;
-  background: transparent;  /* Optional: just make scrollbar invisible */
-}
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
+  overflow-y: hidden !important;
 }
 .feed__Reel--createStory {
-  height: 33vh;
+  height: 34vh;
   min-width: 120px;
   box-shadow: var(--boxShadow);
   background-position: center;
@@ -42,7 +33,7 @@
   border-radius: 5px;
 }
 .feed__Reel--userImageDiv {
-  height: 25vh;
+  height: 26vh;
 }
 .FeedReel__addIconDiv{
   height: 8vh;
