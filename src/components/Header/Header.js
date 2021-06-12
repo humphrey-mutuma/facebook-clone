@@ -30,7 +30,7 @@ const Header = () => {
           />
         </span>
         <span className="header__left--expand">
-          <IconButton className="header__rightIcons">
+          <IconButton className="header__btnExpand">
             <DehazeRoundedIcon size="large" />
           </IconButton>
         </span>

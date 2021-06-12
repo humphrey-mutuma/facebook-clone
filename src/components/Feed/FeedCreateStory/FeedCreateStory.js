@@ -45,20 +45,18 @@ const FeedCreateStory = () => {
       </header>
       <footer className="feedCreateStory__footer">
         <div>
-          <VideoCallOutlinedIcon  fontSize="large" color="secondary" />
-          <h4>Live Video</h4>
+          <VideoCallOutlinedIcon fontSize="large" color="secondary" />
+          <h4 className="iconTitle"> Live Video</h4>
         </div>
         <section>
-          <ImageUpload
-            message={post}
-          />
+          <ImageUpload message={post} />
         </section>
         <div>
           <EmojiEmotionsOutlinedIcon
             fontSize="large"
             style={{ color: "yellow " }}
           />
-          <h4>Feeling/Activity</h4>
+          <h4 className="iconTitle">Feeling/Activity</h4>
         </div>
       </footer>
     </div>

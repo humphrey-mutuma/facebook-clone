@@ -74,13 +74,14 @@ const FeedPost = ({ postId, username, profilePic, imageUrl, message, timestamp }
       {/* post likes */}
       <div className="feedPost__Like">
         <div onClick={likeHandler}>
-          <ThumbUpOutlinedIcon /> like
+          <ThumbUpOutlinedIcon /> <span className="iconTitleHidden">like</span>
         </div>
         <div>
-          <ModeCommentOutlinedIcon /> Comment
+          <ModeCommentOutlinedIcon />{" "}
+          <span className="iconTitleHidden">Comment</span>
         </div>
         <div onClick={shareHandler}>
-          <ShareIcon /> Share
+          <ShareIcon /> <span className="iconTitleHidden">Share</span>
         </div>
       </div>
 

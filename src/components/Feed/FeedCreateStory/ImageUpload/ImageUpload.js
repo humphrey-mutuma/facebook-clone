@@ -72,7 +72,7 @@ const ImageUpload = ({ message }) => {
       <label htmlFor="contained-button-file">
         <Button className="text__btn" component="span">
           <PhotoLibraryIcon fontSize="large" style={{ color: "green" }} />
-          <h4>Image/GIF</h4>
+          <h4 className="iconTitle">Image/GIF</h4>
         </Button>
       </label>
 

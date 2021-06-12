@@ -92,15 +92,18 @@
   height: 25px !important;
   margin-right: 5px;
 }
-.header__rightIcons{
+.header__btnExpand{
+  margin-left: 2px !important;
+}
+.header__rightIcons, .header__btnExpand{
   width: 40px;
   height: 40px;
 }
-.header__rightIcons:hover {
+.header__rightIcons,.header__btnExpand:hover {
   width: 40px;
   height: 40px;
 }
-.header__rightIcons .MuiSvgIcon-root {
+.header__rightIcons,.header__btnExpand .MuiSvgIcon-root {
   background-color: var(--bgColor) !important;
   border-radius: 50% !important;
   padding: 10px;
@@ -144,7 +147,14 @@
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .header__rightIcons{
+    display: none !important;
+  }
+}
+
+
 @media only screen and (min-width: 855px) {
   .header__left--input{
     display: flex;

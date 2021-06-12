@@ -6,3 +6,9 @@
 .text__btn {
   text-transform: inherit !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .iconTitle{
+    display: none !important;
+  }
+}

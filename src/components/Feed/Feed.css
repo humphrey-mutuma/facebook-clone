@@ -58,9 +58,13 @@
   border-radius: 50% !important;
 }
 /* Feed__feedCreateStory */
-.Feed__feedCreateStory {
+.feed__post ,.Feed__feedCreateStory ,.feed__createRoom{
   margin: 1.5rem;
 }
-.feed__post {
-  margin: 1.5rem;
+
+@media only screen and (max-width: 600px) {
+  .feed__post,.Feed__feedCreateStory,.feed__createRoom{
+    margin: 0;
+    padding: 0;
+  }
 }

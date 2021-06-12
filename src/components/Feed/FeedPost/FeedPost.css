@@ -112,3 +112,12 @@
   padding: 5px;
   margin: auto 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .iconTitleHidden{
+    display: none !important;
+  }
+  .feedPost__Like > div {
+  padding: 5px 1.5rem ;
+}
+}
