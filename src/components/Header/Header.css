@@ -25,6 +25,10 @@
   border-radius: 25px;
   padding: 10px;
   margin-left: 10px;
+  cursor: pointer;
+}
+.header__left--expand{
+  display: none;
 }
 .header__left--search > .MuiSvgIcon-root {
   color: grey;
@@ -101,3 +105,61 @@
   border-radius: 50% !important;
   padding: 10px;
 }
+
+/* make the site responsive */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__rightIcons{
+    margin-left: .5rem !important;
+  }
+  .header__left--input, .header__middle{
+    display: none;
+  }
+  .header__left--expand{
+    display: block !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__rightIcons{
+    margin-left: .5rem !important;
+  }
+  .header__left--input, .header__middle{
+    display: none;
+  }
+  .header__left--expand{
+    display: block !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 855px) {
+  .header__left--input{
+    display: flex;
+  }
+  .header__left--expand{
+    display: none !important;
+  }
+
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+  .header__left--input, .header__middle{
+    display: flex;
+  }
+  .header__left--expand{
+    display: none !important;
+  }
+} 

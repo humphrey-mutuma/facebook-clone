@@ -9,10 +9,10 @@ import { Avatar, IconButton } from "@material-ui/core";
 import AppsIcon from "@material-ui/icons/Apps";
 import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import { useStateValue } from "../../StateProvider";
 import SimplePopover from "./SimplePopover";
+import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
 
 const Header = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -23,7 +23,16 @@ const Header = () => {
         <FacebookIcon className="fbIcon" fontSize="large" />
         <span className="header__left--search">
           <SearchIcon />
-          <input type="text" placeholder="Search Facebook" />
+          <input
+            className="header__left--input"
+            type="text"
+            placeholder="Search Facebook"
+          />
+        </span>
+        <span className="header__left--expand">
+          <IconButton className="header__rightIcons">
+            <DehazeRoundedIcon size="large" />
+          </IconButton>
         </span>
       </div>
 

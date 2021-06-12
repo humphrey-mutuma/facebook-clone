@@ -39,17 +39,48 @@ body{
   overflow-y:scroll;
   overflow-x:hidden;
   width: 25%;
-  display: none;
 }
 .MuiAvatar-root {
   z-index: 9 !important;
 }
 /* scroll bars  */
 ::-webkit-scrollbar {
-    width: 5px !important;
-    border-radius: 50% !important;
+  width: 5px !important;
 }
 /* Optional: show position indicator in gray */
 ::-webkit-scrollbar-thumb {
   background: gray !important;
 }
+
+/* make the site responsive */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .app__bodySidebar{display: none !important;}
+  .app__bodyFeed{margin: auto;}
+  .app__bodyWidgets{display: none !important;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .app__bodySidebar{width: 17%;}
+  .app__bodyFeed{margin-right: auto;
+    margin-left: 18%;
+  }
+  .app__bodyWidgets{display: none !important;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 855px) {
+  .app__bodySidebar{width: 22%;}
+  .app__bodyFeed{margin-left: 25%;}
+  .app__bodyWidgets{display: none !important;}
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+  .app__bodySidebar{width: 22%;}
+  .app__bodyFeed{margin: 0 25%;}
+  .app__bodyWidgets{display: flex !important;}
+} 

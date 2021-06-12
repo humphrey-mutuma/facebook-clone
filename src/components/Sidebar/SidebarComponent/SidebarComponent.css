@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex: 0.25 !important;
-  width: 80%;
+  width: 99%;
   padding: 10px;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -25,3 +25,15 @@
   margin-left: 10px;
   font-weight: 500;
 }
+/* mobile responsiveness */
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media screen and (max-width: 855px) {
+  .sidebarComponent__title{display: none !important;}
+  .sidebarComponent{
+    margin-left: 0;
+  }
+  .iconCenter{
+    margin: auto !important;
+  }
+} 
