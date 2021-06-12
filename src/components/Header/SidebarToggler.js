@@ -2,16 +2,17 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
+import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
+import Sidebar from "../Sidebar/Sidebar";
+import './Header.css'
 
 const useStyles = makeStyles((theme) => ({
   typography: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(0),
   },
 }));
 
-export default function SimplePopover() {
+export default function SidebarToggler() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -26,28 +27,28 @@ export default function SimplePopover() {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
-  // logout the user 
+  // logout the user
   return (
     <div>
-      <ArrowDropDownRoundedIcon aria-describedby={id} onClick={handleClick} />
+      <DehazeRoundedIcon aria-describedby={id} onClick={handleClick} />
       <Popover
         id={id}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "center",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
+        // anchorOrigin={{
+        //   vertical: "centre",
+        //   horizontal: "left",
+        // }}
+        // transformOrigin={{
+        //   vertical: "centre",
+        //   horizontal: "left",
+        // }}
       >
         <Typography className={classes.typography}>
-          <Button variant="outlined" color="primary">
-            Logout
-          </Button>
+          <div className="sidebarToggler">
+            <Sidebar />
+          </div>
         </Typography>
       </Popover>
     </div>

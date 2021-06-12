@@ -25,15 +25,4 @@
   margin-left: 10px;
   font-weight: 500;
 }
-/* mobile responsiveness */
-/* Medium devices (landscape tablets, 768px and up) */
 
-@media screen and (max-width: 855px) {
-  .sidebarComponent__title{display: none !important;}
-  .sidebarComponent{
-    margin-left: 0;
-  }
-  .iconCenter{
-    margin: auto !important;
-  }
-} 

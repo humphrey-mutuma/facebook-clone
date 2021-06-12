@@ -11,8 +11,9 @@ import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import AccountBalanceWalletOutlinedIcon from "@material-ui/icons/AccountBalanceWalletOutlined";
 import { useStateValue } from "../../StateProvider";
-import SimplePopover from "./SimplePopover";
+import LogOut from "./LogOut";
 import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
+import SidebarToggler from "./SidebarToggler";
 
 const Header = () => {
   const [{ user }, dispatch] = useStateValue();
@@ -31,7 +32,7 @@ const Header = () => {
         </span>
         <span className="header__left--expand">
           <IconButton className="header__btnExpand">
-            <DehazeRoundedIcon size="large" />
+            <SidebarToggler size="large" />
           </IconButton>
         </span>
       </div>
@@ -69,7 +70,7 @@ const Header = () => {
           <NotificationsActiveIcon />
         </IconButton>
         <IconButton className="header__rightIcons">
-          <SimplePopover />
+          <LogOut />
         </IconButton>
       </div>
     </div>
