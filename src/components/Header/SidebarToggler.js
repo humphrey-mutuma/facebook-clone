@@ -4,7 +4,7 @@ import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import DehazeRoundedIcon from "@material-ui/icons/DehazeRounded";
 import Sidebar from "../Sidebar/Sidebar";
-import './Header.css'
+import "./Header.css";
 
 const useStyles = makeStyles((theme) => ({
   typography: {
@@ -36,14 +36,14 @@ export default function SidebarToggler() {
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
-        // anchorOrigin={{
-        //   vertical: "centre",
-        //   horizontal: "left",
-        // }}
-        // transformOrigin={{
-        //   vertical: "centre",
-        //   horizontal: "left",
-        // }}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
       >
         <Typography className={classes.typography}>
           <div className="sidebarToggler">
